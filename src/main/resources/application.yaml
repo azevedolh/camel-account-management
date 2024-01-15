@@ -1,0 +1,15 @@
+logging:
+  level:
+    root: INFO
+
+spring:
+  application:
+    name: camel-account-management
+
+camel:
+  servlet:
+    mapping:
+        context-path: /account_management/v1/*
+
+server:
+  port: 8081
