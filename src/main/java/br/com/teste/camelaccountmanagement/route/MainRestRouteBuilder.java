@@ -197,7 +197,7 @@ public class MainRestRouteBuilder extends RouteBuilder {
                     .responseMessage().code(504).message("Gateway Timeout").endResponseMessage()
                 .to("direct:TO_createTransactions");
 
-        rest("/customers/{customerId}/accounts/{accountId}/transactions:cancel")
+        rest("/customers/{customerId}/accounts/{accountId}/transactions/{transactionId}/cancel")
                 .post()
                     .id("id-MainRoute-cancelTransactions")
                     .description("Cancel a Transaction")
@@ -214,6 +214,12 @@ public class MainRestRouteBuilder extends RouteBuilder {
                         .type(RestParamType.path)
                         .required(Boolean.TRUE)
                         .description("accountId")
+                    .endParam()
+                    .param()
+                        .name("transactionId")
+                        .type(RestParamType.path)
+                        .required(Boolean.TRUE)
+                        .description("transactionId")
                     .endParam()
                     .type(CancelTransactionDTO.class)
                     .outType(NewTransactionResponseDTO.class)

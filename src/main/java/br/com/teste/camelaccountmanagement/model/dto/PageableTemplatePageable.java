@@ -2,8 +2,7 @@ package br.com.teste.camelaccountmanagement.model.dto;
 
 import lombok.*;
 
-@Setter
-@Getter
+@Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor

@@ -5,6 +5,9 @@ logging:
 spring:
   application:
     name: camel-account-management
+  mvc:
+    servlet:
+      path: /account_management/v1/api
 
 camel:
   servlet:
@@ -13,3 +16,6 @@ camel:
 
 server:
   port: 8081
+
+backend:
+  url: ${BACKEND_URL:http:localhost:8080/account-management/api/v1}
