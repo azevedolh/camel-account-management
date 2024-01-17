@@ -30,7 +30,7 @@ http://localhost:8081/account_management/v1/swagger-ui
 
 Uma Collection do postman de exemplo pode ser encontrada no diretório abaixo:
 ```
-https://github.com/azevedolh/camel-account-management/tree/main/src/main/resources/docs
+https://github.com/azevedolh/camel-account-management/tree/master/src/main/resources/docs
 ```
 
 ## Detalhamento Endpoints
