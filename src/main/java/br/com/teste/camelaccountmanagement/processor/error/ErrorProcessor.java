@@ -5,7 +5,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
 
-@Component
 public class ErrorProcessor implements org.apache.camel.Processor {
     @Override
     public void process(Exchange exchange) throws Exception {

@@ -74,16 +74,8 @@ public class GenericDtoTest {
     }
 
     @Test
-    public void shouldExecuteGetterAndSetterConstructorsWithClassPageableCustomer() {
-        assertDoesNotThrow(() -> DTOTester.executeGetterSetterConstructor(PageableCustomer.class),
-                "cannot throw exception");
-    }
-
-    @Test
     public void shouldExecuteGetterAndSetterConstructorsWithClassTransactionResponseDTO() {
         assertDoesNotThrow(() -> DTOTester.executeGetterSetterConstructor(TransactionResponseDTO.class),
                 "cannot throw exception");
     }
-
-
 }

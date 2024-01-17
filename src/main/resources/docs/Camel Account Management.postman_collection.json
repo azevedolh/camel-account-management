@@ -1,0 +1,178 @@
+{
+	"info": {
+		"_postman_id": "e1428bef-b608-4f3c-b107-1ee9ce989996",
+		"name": "Camel Account Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "14879772"
+	},
+	"item": [
+		{
+			"name": "customers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/account_management/v1/customers?page=1&size=50",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"account_management",
+						"v1",
+						"customers"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "size",
+							"value": "50"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "customers",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"name\": \"teste da silva\",\r\n    \"document\": \"123456789\",\r\n    \"documentType\": \"PF\",\r\n    \"address\": \"rua do teste\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8081/account_management/v1/customers"
+			},
+			"response": []
+		},
+		{
+			"name": "accounts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/account_management/v1/customers/1/accounts?page=1&size=50",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"account_management",
+						"v1",
+						"customers",
+						"1",
+						"accounts"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "size",
+							"value": "50"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "accounts",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"agency\": \"1234\",\r\n    \"balance\": 1343.45\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8081/account_management/v1/customers/1/accounts"
+			},
+			"response": []
+		},
+		{
+			"name": "transactions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/account_management/v1/customers/1/accounts/1/transactions?page=1&size=50",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"account_management",
+						"v1",
+						"customers",
+						"1",
+						"accounts",
+						"1",
+						"transactions"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "size",
+							"value": "50"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "transactions",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"destinationAccount\": 2,\r\n    \"amount\": 1000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8081/account_management/v1/customers/1/accounts/1/transactions"
+			},
+			"response": []
+		},
+		{
+			"name": "transactions/{id}/cancel",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": "localhost:8081/account_management/v1/customers/1/accounts/1/transactions/1/cancel"
+			},
+			"response": []
+		},
+		{
+			"name": "swagger",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8081/account_management/v1/swagger-ui"
+			},
+			"response": []
+		}
+	]
+}
